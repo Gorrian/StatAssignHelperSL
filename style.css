@@ -7,21 +7,27 @@ main{
     display: flex;
     justify-content: space-around;
     border-radius: 40px;
-    width: 300px;
+    width: 375px;
 }
 main>form{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 main>form>article{
     display: flex;
     flex-direction: column;
+    
+}
+main>form>article>*{
+    width: 95%;
 }
 input{
     background: rgb(2,0,36);
     background: linear-gradient(27deg, rgba(2,0,36,1) 0%, rgba(6,0,36,1) 0%, rgba(33,0,33,1) 100%);
 }
-#ShowValue{
+#ShowValue, #RealCost{
     height: 100px;
     align-self: center;
+    
 }
