@@ -1,5 +1,6 @@
 const FindAllStatsQuery=".StatValue";
 const ShowValue="#ShowValue";
+const RealCost="#RealCost";
 document.addEventListener("DOMContentLoaded", function(event){
     let statBlocks = document.querySelectorAll(FindAllStatsQuery);
     let minValue = FindSmallestValue();
@@ -36,19 +37,22 @@ function ChangedValue(minValue,maxValue,position){
 function CalcCost(){
     let statBlocks=document.querySelectorAll(FindAllStatsQuery);
     let statCostShow=document.querySelector(ShowValue);
+    let realStatCostShow=document.querySelector(RealCost);
     let sum=0;
+    let realSum=0;
     
     for(let element of statBlocks){
         if(element.value<0){
-            for(let i = 0; i>element.value; i--){
+            for(let i = 0; i>=element.value; i--){
                 sum+=TableCost[i];
             }
         }else{
-            for(let i = 0; i<element.value; i++){
+            for(let i = 0; i<=element.value; i++){
                 sum+=TableCost[i];
+                realSum+=TableCost[i];
             }
         }
-        sum+=TableCost[element.value];
     }
     statCostShow.value=sum+" SP";
+    realStatCostShow.value=realSum+" SP"
 }
