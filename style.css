@@ -1,0 +1,27 @@
+*{
+    background-color: #303030;
+    color: white;
+    font-family: Dosis;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 40px;
+    width: 300px;
+}
+main>form{
+    display: flex;
+    flex-direction: column;
+}
+main>form>article{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    background: rgb(2,0,36);
+    background: linear-gradient(27deg, rgba(2,0,36,1) 0%, rgba(6,0,36,1) 0%, rgba(33,0,33,1) 100%);
+}
+#ShowValue{
+    height: 100px;
+    align-self: center;
+}
